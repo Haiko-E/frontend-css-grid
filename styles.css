@@ -1,1 +1,80 @@
-/*Maak hier jouw CSS!*/
+.container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 210px auto 50px;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-areas:
+    "alpha charlie charlie"
+    "bravo charlie charlie"
+    "bravo echo delta"
+    "foxtrot foxtrot foxtrot";
+}
+
+#alpha {
+  background-color: brown;
+  grid-area: alpha;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bravo {
+  background-color: brown;
+  grid-area: bravo;
+  padding: 10px;
+}
+
+#charlie {
+  background-color: brown;
+  grid-area: charlie;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#delta {
+  background-color: brown;
+  grid-area: delta;
+  max-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#echo {
+  background-color: brown;
+  grid-area: echo;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#foxtrot {
+  background-color: brown;
+  grid-area: foxtrot;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+      "alpha"
+      "bravo"
+      "charlie"
+      "delta"
+      "echo"
+      "."
+      "foxtrot";
+  }
+}
