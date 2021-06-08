@@ -1,15 +1,23 @@
+body {
+  background-color: rgb(250, 234, 203);
+}
+
 .container {
+  color: white;
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 174px auto 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
   column-gap: 16px;
   row-gap: 16px;
   grid-template-areas:
-    "alpha charlie charlie"
-    "bravo charlie charlie"
-    "bravo echo delta"
-    "foxtrot foxtrot foxtrot";
+    "alpha"
+    "bravo"
+    "charlie"
+    "delta"
+    "echo"
+    "."
+    "foxtrot";
 }
 
 #alpha {
@@ -64,17 +72,14 @@
   align-items: center;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 174px auto 50px;
     grid-template-areas:
-      "alpha"
-      "bravo"
-      "charlie"
-      "delta"
-      "echo"
-      "."
-      "foxtrot";
+      "alpha charlie charlie"
+      "bravo charlie charlie"
+      "bravo echo delta"
+      "foxtrot foxtrot foxtrot";
   }
 }
